@@ -10,8 +10,10 @@ cat - <<END
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Arho Mahlamäki - $(get_var title)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web page - $(get_var title)</title>
 </head>
+<link rel="stylesheet" href="styles.css" />
 <body>
 
 <nav>
