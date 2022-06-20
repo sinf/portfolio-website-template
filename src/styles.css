@@ -1,5 +1,93 @@
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: inherit;
+	text-decoration: underline;
+}
+a:visited {
+	color: inherit;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
 
 body {
-	background: beige;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+
+	background: #0A1930;
+	color: #5FFDE2;
+	border-color: #5FFDE2;
+}
+
+main {
+	color: #CAD7F7;
+}
+main a, main a:visited {
+	color: #5FFDE2;
+}
+
+main {
+	align-self: stretch;
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+#topmenu {
+	align-self: flex-start;
+	padding: 0.5em 0 0.5em 0;
+	width: 100%;
+	background: inherit;
+	color: inherit;
+	box-shadow: 0 -56em 7em 50em;
+}
+
+#topmenu ul {
+	min-width: 0;
+	margin: 5px 10px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	align-items: stretch;
+	align-content: stretch;
+	gap: 0.3em 1em;
+}
+
+#topmenu li {
+	list-style-type: none;
+}
+
+#topmenu a {
+	display: block;
+	font-style: inherit;
+	text-decoration: none;
+	padding: 10px;
+
+	border-radius: 5px;
+	border-width: 1.5px;
+	border-style: solid;
+	border-color: transparent;
+}
+#topmenu a[href="#"] {
+	border-color: inherit;
+	box-shadow: 0 0 10px -1px;
 }
 

@@ -16,10 +16,17 @@ cat - <<END
 <link rel="stylesheet" href="styles.css" />
 <body>
 
-<nav>
+<nav id="topmenu">
+<ul>
 $(ali index.html About)
 $(ali portfolio.html Portfolio)
 $(ali contact.html Contact)
+
+$(ali fail.html Experience)
+$(ali fail.html Work)
+$(ali fail.html Resume)
+
+</ul>
 </nav>
 
 <main>
