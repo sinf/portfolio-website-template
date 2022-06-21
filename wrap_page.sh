@@ -40,6 +40,10 @@ $(cat "$filename")
 </article>
 </main>
 
+<footer>
+<span>The sources for this garbage can be found <a href="https://github.com/sinf/portfolio-website-template">here</a></span>
+</footer>
+
 </body>
 </html>
 END
