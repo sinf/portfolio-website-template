@@ -1,4 +1,4 @@
-.PHONY: all clean
+.PHONY: all clean start
 .SUFFIXES:
 
 SRC_DIR:=src
@@ -20,4 +20,6 @@ $(DST_DIR)/%: $(SRC_DIR)/%
 clean:
 	rm -rf $(DST_DIR)/*
 
+start: all
+	docker run -v $(PWD)/Caddyfile:/etc/caddy/Caddyfile:ro -v $(PWD)/build:/www:ro -p 5120:80 -d caddy:latest
 

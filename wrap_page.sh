@@ -26,18 +26,17 @@ body {
 <ul>
 $(ali index.html About)
 $(ali portfolio.html Portfolio)
+$(ali experience.html Experience)
 $(ali contact.html Contact)
-
-$(ali fail.html Experience)
-$(ali fail.html Work)
-$(ali fail.html Resume)
 
 </ul>
 </nav>
 
 <main>
 <article>
+<div>
 $(cat "$filename")
+</div>
 </article>
 </main>
 
