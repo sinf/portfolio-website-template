@@ -1,4 +1,6 @@
 # Portfolio website template
 
-Simple setup to automate glueing a header and footer into the body of each page. Only need very basic programs (bash, make, busybox).  
+A simple setup to build a basic website using only plain HTML and CSS.  
+
+Makefile and wrap_page.sh are used to glue a header and a footer into the body of each page.  
 
