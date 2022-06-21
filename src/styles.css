@@ -36,6 +36,10 @@ body {
 	border-color: #5FFDE2;
 }
 
+h1 {
+	color: white;
+}
+
 main {
 	color: #CAD7F7;
 }
@@ -62,7 +66,8 @@ main {
 
 #topmenu ul {
 	min-width: 0;
-	margin: 5px 10px;
+	max-width: 60em;
+	margin: 5px auto;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-evenly;
@@ -75,8 +80,20 @@ main {
 	list-style-type: none;
 }
 
-#topmenu a {
-	display: block;
+/* shadow at the bottom */
+body main:after {
+	content: '';
+	position: absolute;
+	left: -20em;
+	right: 20em;
+	bottom: -10em;
+	height: 10em;
+	color: #5FFDE2;
+	box-shadow: 0 56em 7em 52em;
+}
+
+a.button {
+	display: inline-block;
 	font-style: inherit;
 	text-decoration: none;
 	padding: 10px;
@@ -84,10 +101,84 @@ main {
 	border-radius: 5px;
 	border-width: 1.5px;
 	border-style: solid;
-	border-color: transparent;
+	border-color: inherit;
 }
-#topmenu a[href="#"] {
+
+a.button:hover {
+	text-decoration: underline;
+	box-shadow: 0 0 10px -0.5px;
+	animation-name: topmenu_blink;
+	animation-duration: 0.150s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes topmenu_blink {
+	from {
+		box-shadow: 0 0 10px -4.5px;
+	}
+	to {
+		box-shadow: 0 0 10px -0.5px;
+	}
+}
+
+nav a.button {
+	border-color: transparent;
+	box-shadow: none;
+}
+
+nav a.button[href="#"] {
 	border-color: inherit;
 	box-shadow: 0 0 10px -1px;
+}
+
+img {
+	object-fit: cover;
+	width: 100%;
+	min-width: 5em;
+	min-height: 5em;
+	max-height: 10em;
+}
+
+img.profile-pic {
+	object-fit: contain;
+	max-width: 10em;
+	max-height: 15em;
+	align-self: flex-end;
+}
+
+h1, h2 {
+	font-size: 250%;
+	margin: 0.5rem 0 0.5rem 0;
+}
+
+body main {
+	max-width: 60em;
+	margin: 0 auto 0 auto;
+	padding: 0 1em;
+
+	animation-name: main_fadein;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+}
+
+@keyframes main_fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
+.text-with-img {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+.text-with-img img {
+	margin: 0.5em 1em;
 }
 

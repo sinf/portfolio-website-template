@@ -3,7 +3,7 @@ filename="$1"
 get_var() ( grep "$1" "$filename" | cut -d= -f2)
 ali() (
 	if [ "$1" = ${filename#src/} ]; then u='#'; else u="$1"; fi
-	echo "<li><a href=\"$u\">$2</a></li>"
+	echo "<li><a class=\"button\" href=\"$u\">$2</a></li>"
 )
 
 cat - <<END
